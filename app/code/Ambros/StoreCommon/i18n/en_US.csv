@@ -1,0 +1,11 @@
+DHL,DHL
+"DHL service is not available at %s date","DHL service is not available at %s date"
+"End Date must follow Start Date.","End Date must follow Start Date."
+Language,Language
+"No packages for request","No packages for request"
+"Please choose a valid discount amount.","Please choose a valid discount amount."
+"Please specify Customer Groups.","Please specify Customer Groups."
+"Please specify a store.","Please specify a store."
+"The response is in wrong format.","The response is in wrong format."
+"We had to skip DHL method %1 because we couldn't find exchange rate %2 (Base Currency).","We had to skip DHL method %1 because we couldn't find exchange rate %2 (Base Currency)."
+"Zero shipping charge for '%1'","Zero shipping charge for '%1'"

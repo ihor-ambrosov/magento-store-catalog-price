@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Ihor Ambrosov <ihor.ambrosov@gmail.com>
+ * @license https://opensource.org/licenses/OSL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductTierPriceInterface">
+        <attribute code="store_id" type="int"/>
+    </extension_attributes>
+    <extension_attributes for="Magento\Catalog\Api\Data\TierPriceInterface">
+        <attribute code="store_id" type="int"/>
+    </extension_attributes>
+</config>

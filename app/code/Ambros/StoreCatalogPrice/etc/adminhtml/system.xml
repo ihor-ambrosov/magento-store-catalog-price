@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+  * @author Ihor Ambrosov <ihor.ambrosov@gmail.com>
+  * @license https://opensource.org/licenses/OSL-3.0
+  */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales">
+            <group id="msrp" showInStore="1">
+                <field id="enabled" showInStore="1"/>
+                <field id="display_price_type" showInStore="1"/>
+            </group>
+        </section>
+        <section id="currency">
+            <group id="options">
+                <field id="base" showInStore="1"/>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Ihor Ambrosov <ihor.ambrosov@gmail.com>
+ * @license https://opensource.org/licenses/OSL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\AdvancedPricingImportExport\Model\Export\AdvancedPricing">
+        <plugin name="ff4059bccadb725f7b30b67518667be6" type="Ambros\StoreCatalogPrice\Plugin\Model\AdvancedPricingImportExport\Export\AdvancedPricing" sortOrder="100"/>
+    </type>
+    <type name="Magento\AdvancedPricingImportExport\Model\Import\AdvancedPricing">
+        <plugin name="9cd7a6bad374a8129e7d4d8cba181100" type="Ambros\StoreCatalogPrice\Plugin\Model\AdvancedPricingImportExport\Import\AdvancedPricing" sortOrder="100"/>
+    </type>
+    <type name="Magento\AdvancedPricingImportExport\Model\Import\AdvancedPricing\Validator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="tierPrice" xsi:type="object">Ambros\StoreCatalogPrice\Model\AdvancedPricingImportExport\Import\AdvancedPricing\Validator\TierPrice</item>
+                <item name="store" xsi:type="object">Ambros\StoreCatalogPrice\Model\AdvancedPricingImportExport\Import\AdvancedPricing\Validator\Store</item>
+                <item name="tierPriceType" xsi:type="object">Magento\AdvancedPricingImportExport\Model\Import\AdvancedPricing\Validator\TierPriceType</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\AdvancedSearch\Model\ResourceModel\Index">
+        <plugin name="4cb4f48fd8c94ced27d3a69c30feb7e0" type="Ambros\StoreCatalogPrice\Plugin\Model\AdvancedSearch\ResourceModel\Index" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Model\LinkManagement">
+        <plugin name="63fc6d98c64996ddfc1fa0520c1f91e7" type="Ambros\StoreCatalogPrice\Plugin\Model\Bundle\LinkManagement" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Model\Product\Type">
+        <plugin name="7ffd261ff02ae9592e4deef2ff86ccf8" type="Ambros\StoreCatalogPrice\Plugin\Model\Bundle\Product\Type" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Model\ResourceModel\Indexer\Price">
+        <plugin name="89c05b78c374618082067dec2804b89d" type="Ambros\StoreCatalogPrice\Plugin\Model\Bundle\ResourceModel\Indexer\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Model\ResourceModel\Selection">
+        <plugin name="cda68275a45b41e5fd873004d5be9973" type="Ambros\StoreCatalogPrice\Plugin\Model\Bundle\ResourceModel\Selection" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Model\ResourceModel\Selection\Collection">
+        <plugin name="d897a5b2f960646354c01007adbaf009" type="Ambros\StoreCatalogPrice\Plugin\Model\Bundle\ResourceModel\Selection\Collection" sortOrder="80"/>
+    </type>
+    <type name="Magento\CatalogInventory\Model\Indexer\ProductPriceIndexFilter">
+        <plugin name="change_select_for_price_modifier" disabled="true"/>
+        <plugin name="ec7e00922785bc7b6646928f18ffccc4" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogInventory\Indexer\ProductPriceIndexFilter" sortOrder="90"/>
+    </type>
+    <type name="Magento\CatalogRule\Model\Indexer\ProductPriceIndexModifier">
+        <plugin name="d267bff35be0c2181f11e2ad3266d8b8" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogRule\Indexer\ProductPriceIndexModifier" sortOrder="100"/>
+    </type>
+    <type name="Magento\CatalogSearch\Model\Adapter\Mysql\Dynamic\DataProvider">
+        <plugin name="22ba2ad14c35be27121722e5eaf19207" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogSearch\Adapter\Mysql\Dynamic\DataProvider" sortOrder="80"/>
+    </type>
+    <type name="Magento\CatalogSearch\Model\ResourceModel\Advanced\Collection">
+        <plugin name="7b5791bfc4257c69741eb46c3bbfddf2" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogSearch\ResourceModel\Advanced\Collection" sortOrder="80"/>
+    </type>
+    <type name="Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection">
+        <plugin name="26ffa0f7d3fad028dc89b5d708cd2f94" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogSearch\ResourceModel\Fulltext\Collection" sortOrder="80"/>
+    </type>
+    <type name="Magento\CatalogSearch\Model\Search\FilterMapper\ExclusionStrategy">
+        <plugin name="1a3d7d3b9c254b486c4225f746866b51" type="Ambros\StoreCatalogPrice\Plugin\Model\CatalogSearch\Search\FilterMapper\ExclusionStrategy" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Block\Adminhtml\Product\Edit\Tab\Alerts\Price">
+        <plugin name="4850323cdd3ea7a48bd793723145dd72" type="Ambros\StoreCatalogPrice\Plugin\Block\Catalog\Adminhtml\Product\Edit\Tab\Alerts\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Config\Source\Price\Scope">
+        <plugin name="69142b781eb2253bbc1ca341428e49fa" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Config\Source\Price\Scope" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\Action\Full">
+        <plugin name="6444da60692a9245cfa02b13a1e7f66d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\Action\Full" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\Action\Row">
+        <plugin name="30e3eeaeb156ef3975b791c068d5e27b" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\Action\Row" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\Action\Rows">
+        <plugin name="81aa6edd865378287b8fdf686bd4ea6d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\Action\Rows" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\DimensionCollectionFactory">
+        <arguments>
+            <argument name="dimensionProviders" xsi:type="array">
+                <item name="ws" xsi:type="object">Ambros\StoreCommon\Model\Store\Indexer\StoreDimensionProvider</item>
+                <item name="cg" xsi:type="object">Magento\Customer\Model\Indexer\CustomerGroupDimensionProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\DimensionModeConfiguration">
+        <plugin name="d5ad5ca7e004668208f2e51860fab002" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\DimensionModeConfiguration" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\ModeSwitcher">
+        <plugin name="ba2372e99a786be584400c99555c376d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\ModeSwitcher" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\PriceTableResolver">
+        <plugin name="5144921b29e6db0ea7c4f4193f303c0d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\PriceTableResolver" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Indexer\Product\Price\TableMaintainer">
+        <plugin name="063423e0e46f90bc045304eb5ae4dc2f" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Indexer\Product\Price\TableMaintainer" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Backend\Price">
+        <plugin name="8f64f6bf52a386dcebcd43a2b47617dd" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Attribute\Backend\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Backend\TierPrice\SaveHandler">
+        <plugin name="a2c661229c1466fed98db556fcb9412e" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Attribute\Backend\TierPrice\SaveHandler" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Backend\TierPrice\UpdateHandler">
+        <plugin name="94c1509f4aea68e8bbcc8014d56d511a" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Attribute\Backend\TierPrice\UpdateHandler" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Backend\Tierprice">
+        <plugin name="ae8caf29c169d3f89b106830fadc185d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Attribute\Backend\Tierprice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Price\TierPriceFactory">
+        <plugin name="e84da5031f33151177a09989e1da70d7" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Price\TierPriceFactory" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Price\Validation\TierPriceValidator">
+        <plugin name="b929f0b68839a07a237716fde633dd19" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Price\Validation\TierPriceValidator" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\ScopedTierPriceManagement">
+        <plugin name="0cf55254b1812d8e3aa8f3ceb1da7439" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\ScopedTierPriceManagement" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\TierPriceManagement">
+        <plugin name="50b0cb0493a77b9d66445e075e91d274" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\TierPriceManagement" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Type\Price">
+        <plugin name="4c860f4d1eac3f635210346eea1f3242" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Product\Type\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Layer\Filter\Price">
+        <plugin name="81ba1545f3091d6c6a731600220a2c17" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Layer\Filter\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Attribute\Backend\Tierprice">
+        <plugin name="03be61807bfb21940927b0b86b993cf8" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Attribute\Backend\Tierprice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Collection">
+        <plugin name="674b9ee240d1f5c78da91baef47a9523" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Collection" sortOrder="90"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\LinkedProductSelectBuilderByIndexPrice">
+        <plugin name="f9ac9129da08295533c8438a422b6b89" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Indexer\LinkedProductSelectBuilderByIndexPrice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\CustomOptionPriceModifier">
+        <plugin name="c31ec15844324919f8d3693b48c3445f" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Indexer\Price\CustomOptionPriceModifier" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\Query\BaseFinalPrice">
+        <plugin name="591683d79837da5a92e40a8902643fb8" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Indexer\Price\Query\BaseFinalPrice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\Query\JoinAttributeProcessor">
+        <plugin name="b4fdc2a63eb5eceb4b6b0c5a1818fde9" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Indexer\Price\Query\JoinAttributeProcessor" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\TierPrice">
+        <plugin name="b4d2594a6cb0de4020187a16da166c28" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Indexer\Price\TierPrice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\LinkedProductSelectBuilderByTierPrice">
+        <plugin name="3efdbdfc492adc32740045865a057033" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\LinkedProductSelectBuilderByTierPrice" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Option">
+        <plugin name="5015393e6858648cfd657fe10734e091" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Option" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Option\Collection">
+        <plugin name="ca2ca0b2a1deef6ef4abd0c63d81604d" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Option\Collection" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Option\Value">
+        <plugin name="f5be7bfd7412c600d2123943d5789296" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Option\Value" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Option\Value\Collection">
+        <plugin name="8902811c52eccdce1b798ad328f5d1b2" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\ResourceModel\Product\Option\Value\Collection" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Model\Rss\Product\Special">
+        <plugin name="3b7940e43811afdc868b884027558705" type="Ambros\StoreCatalogPrice\Plugin\Model\Catalog\Rss\Product\Special" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Observer\SwitchPriceAttributeScopeOnConfigChange">
+        <plugin name="6e4ce32eaa9b69019af1b897c320f733" type="Ambros\StoreCatalogPrice\Plugin\Observer\Catalog\SwitchPriceAttributeScopeOnConfigChange" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\AdvancedPricing">
+        <plugin name="f149fe4346532cf3ff4257b06a80e2b8" type="Ambros\StoreCatalogPrice\Plugin\Ui\Catalog\DataProvider\Product\Form\Modifier\AdvancedPricing" sortOrder="100"/>
+    </type>
+    <type name="Magento\Catalog\Ui\DataProvider\Product\ProductCollection">
+        <plugin name="2a7bb9c0998e65eecbdf1bfad18cd825" type="Ambros\StoreCatalogPrice\Plugin\Ui\Catalog\DataProvider\Product\ProductCollection" sortOrder="80"/>
+    </type>
+    <type name="Magento\ConfigurableProduct\Model\ResourceModel\Product\Indexer\Price\Configurable">
+        <plugin name="cf5b73de3c4b2d146046aaf414e18f9d" type="Ambros\StoreCatalogPrice\Plugin\Model\ConfigurableProduct\ResourceModel\Product\Indexer\Price\Configurable" sortOrder="100"/>
+    </type>
+    <type name="Magento\Customer\Api\GroupRepositoryInterface">
+        <plugin name="invalidatePriceIndexerOnCustomerGroup" disabled="true"/>
+        <plugin name="aed95e4377f4b8d1c895394419c0f5d3" type="Ambros\StoreCatalogPrice\Plugin\Api\Customer\GroupRepositoryInterface" sortOrder="100"/>
+    </type>
+    <type name="Magento\Dhl\Model\Carrier">
+        <plugin name="06a56b20c54b63c6012ea31088dee713" type="Ambros\StoreCatalogPrice\Plugin\Model\Dhl\Carrier" sortOrder="100"/>
+    </type>
+    <type name="Magento\Directory\Block\Adminhtml\Frontend\Currency\Base">
+        <plugin name="3f10f616df7d0c7ef368f5b5b8371b1c" type="Ambros\StoreCatalogPrice\Plugin\Block\Directory\Adminhtml\Frontend\Currency\Base" sortOrder="100"/>
+    </type>
+    <type name="Magento\DownloadableGraphQl\Model\Resolver\Product\DownloadableOptions">
+        <plugin name="fadb73f49e0cd2ec53d8cdc20f543b36" type="Ambros\StoreCatalogPrice\Plugin\Model\DownloadableGraphQl\Resolver\Product\DownloadableOptions" sortOrder="100"/>
+    </type>
+    <type name="Magento\DownloadableImportExport\Model\Import\Product\Type\Downloadable">
+        <plugin name="b025e9882e84dc764f78caa735f87379" type="Ambros\StoreCatalogPrice\Plugin\Model\DownloadableImportExport\Import\Product\Type\Downloadable" sortOrder="100"/>
+    </type>
+    <type name="Magento\Downloadable\Model\Product\Type">
+        <plugin name="6587b2b0406eecc181834ca4bd214014" type="Ambros\StoreCatalogPrice\Plugin\Model\Downloadable\Product\Type" sortOrder="100"/>
+    </type>
+    <type name="Magento\Downloadable\Model\ResourceModel\Indexer\Price">
+        <plugin name="578a09fcdc76cd1e29d70ef2d48cc3b6" type="Ambros\StoreCatalogPrice\Plugin\Model\Downloadable\ResourceModel\Indexer\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Downloadable\Model\ResourceModel\Link">
+        <plugin name="476f5274ab2da5294edea6cb57352f75" type="Ambros\StoreCatalogPrice\Plugin\Model\Downloadable\ResourceModel\Link" sortOrder="100"/>
+    </type>
+    <type name="Magento\Downloadable\Model\ResourceModel\Link\Collection">
+        <plugin name="63884b4f4164b46138c29936198e5d1d" type="Ambros\StoreCatalogPrice\Plugin\Model\Downloadable\ResourceModel\Link\Collection" sortOrder="100"/>
+    </type>
+    <type name="Magento\Downloadable\Ui\DataProvider\Product\Form\Modifier\UsedDefault">
+        <plugin name="243077710e45adad967869e2ffaf6195" type="Ambros\StoreCatalogPrice\Plugin\Ui\Downloadable\DataProvider\Product\Form\Modifier\UsedDefault" sortOrder="100"/>
+    </type>
+    <type name="Magento\Elasticsearch\Model\Adapter\BatchDataMapper\PriceFieldsProvider">
+        <plugin name="fd0e210579e4c84cc4595acc802023db" type="Ambros\StoreCatalogPrice\Plugin\Model\Elasticsearch\Adapter\BatchDataMapper\PriceFieldsProvider" sortOrder="100"/>
+    </type>
+    <type name="Magento\Elasticsearch\Model\Adapter\FieldMapper\Product\FieldProvider\FieldName\Resolver\Price">
+        <plugin name="0d6dd9dd9bafbf7ac0925df0f06a64c6" type="Ambros\StoreCatalogPrice\Plugin\Model\Elasticsearch\Adapter\FieldMapper\Product\FieldProvider\FieldName\Resolver\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\Framework\Mview\View\SubscriptionFactory">
+        <plugin name="5ef8cfd76b9972b7c23448281c0cd13f" type="Ambros\StoreCatalogPrice\Plugin\Framework\Mview\View\SubscriptionFactory" sortOrder="100"/>
+    </type>
+    <type name="Magento\GroupedProduct\Model\ResourceModel\Product\Indexer\Price\Grouped">
+        <plugin name="ed6044dbb8ba45efac07cf9c8b4020e5" type="Ambros\StoreCatalogPrice\Plugin\Model\GroupedProduct\ResourceModel\Product\Indexer\Price\Grouped" sortOrder="100"/>
+    </type>
+    <type name="Magento\ProductAlert\Controller\Unsubscribe\Price">
+        <plugin name="b4338a237703a76fd4b138f07ad6547c" type="Ambros\StoreCatalogPrice\Plugin\Controller\ProductAlert\Unsubscribe\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\ProductAlert\Controller\Unsubscribe\PriceAll">
+        <plugin name="8ac921de9096e6b65a88a95b6cc241df" type="Ambros\StoreCatalogPrice\Plugin\Controller\ProductAlert\Unsubscribe\PriceAll" sortOrder="100"/>
+    </type>
+    <type name="Magento\ProductAlert\Model\Observer">
+        <plugin name="6a8cc87ec589b0c705bf7fbad341d34c" type="Ambros\StoreCatalogPrice\Plugin\Model\ProductAlert\Observer" sortOrder="100"/>
+    </type>
+    <type name="Magento\ProductAlert\Model\ResourceModel\Price">
+        <plugin name="ce8aa49762d1f6e2c4d7b6f5e72d04b0" type="Ambros\StoreCatalogPrice\Plugin\Model\ProductAlert\ResourceModel\Price" sortOrder="100"/>
+    </type>
+    <type name="Magento\ProductAlert\Model\ResourceModel\Price\Customer\Collection">
+        <plugin name="a012beeafb5991a962063eb6b5f41cc1" type="Ambros\StoreCatalogPrice\Plugin\Model\ProductAlert\ResourceModel\Price\Customer\Collection" sortOrder="100"/>
+    </type>
+    <type name="Magento\Review\Model\ResourceModel\Review\Product\Collection">
+        <plugin name="a2c49d882e81e3144bba03546a5edd2b" type="Ambros\StoreCatalogPrice\Plugin\Model\Review\ResourceModel\Review\Product\Collection" sortOrder="80"/>
+    </type>
+    <type name="Magento\Store\Model\ResourceModel\Store">
+        <plugin name="a7c83645a3eae3837c93411e63bbf349" type="Ambros\StoreCatalogPrice\Plugin\Model\Store\ResourceModel\Store" sortOrder="100"/>
+    </type>
+    <type name="Magento\Store\Model\ResourceModel\Website">
+        <plugin name="invalidatePriceIndexerOnWebsite" disabled="true"/>
+    </type>
+    <type name="Magento\Store\Model\Store">
+        <plugin name="807fbd60741b95a93d93a12b7091fe4f" type="Ambros\StoreCatalogPrice\Plugin\Model\Store\Store" sortOrder="100"/>
+    </type>
+</config>

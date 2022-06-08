@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Ihor Ambrosov <ihor.ambrosov@gmail.com>
+ * @license https://opensource.org/licenses/OSL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\ResourceConnection">
+        <plugin name="get_catalog_product_price_index_table_name" disabled="true"/>
+        <plugin name="8a870a33603679f014c9cba7f960b7f5" type="Ambros\StoreCatalogPrice\Plugin\Framework\App\ResourceConnection" sortOrder="100"/>
+    </type>
+</config>
